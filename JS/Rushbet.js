@@ -15,7 +15,31 @@ const apuesta = () => {
   .then(data => {
     console.log(data);
     const apuesta = document.getElementById('valueBet');
-    const valorApuesta = apuesta.value < 10000 ? alert("El valor minimo para apostar es de 10.000") :  apuesta.value > 1000000 ? alert("El valor maximo para apostar es de 1'000.000") : apuesta.value;
+    const valorApuesta = apuesta.value < 10000 ?
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: "El valor minimo para apostar es de $10.000",
+        backdrop: false,
+        position: 'center',
+        showConfirmButton: true,
+        confirmButtonColor: '#fcc307',
+        showCloseButton: true,
+        closeButtonAriaLabel: 'cerrar alerta'
+      }) :
+      apuesta.value > 1000000 ?
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: "El valor maximo para apostar es de $1'000.000",
+        backdrop: false,
+        position: 'center',
+        showConfirmButton: true,
+        confirmButtonColor: '#fcc307',
+        showCloseButton: true,
+        closeButtonAriaLabel: 'cerrar alerta'
+      }) :
+      apuesta.value;
     const valorCuotaArgentina = checkArgentina.checked ? data.valorLoc : checkBrasil.checked ? data.valorVis : checkEmpate.checked ? data.valorEmp : 0;
 
     const gananciaApuesta = calcularApuesta(valorApuesta, valorCuotaArgentina);

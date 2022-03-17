@@ -226,10 +226,10 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
-    .refresh__text_content h3{
-      color: @textColor;
-    }
   }
+}
+.refresh__text_content h3{
+  color: @textColor;
 }
 
 .refresh__button_content{
@@ -262,6 +262,7 @@ body{
   border: 0;
   outline: none;
   padding-left: 15px;
+  text-align: center;
 }
 
 .inputNumber__bet input::placeholder{
@@ -327,14 +328,23 @@ body{
   cursor: pointer;
 }
 
+.calculate__textFooter{
+  color: @textColor;
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: 600;
+  display: none;
+}
+
+
 /* footer */
 
 .footer__container{
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 60px;
-  padding: 0;
+  bottom: 135px;
+  padding: 10px;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -348,4 +358,106 @@ body{
 .footer__container img{
   width: 100px;
   height: 40px;
+}
+
+@media (max-width: 900px) {
+  body{
+    background-image: url('../assets/Image/BG-MOBILE.jpg');
+  }
+  .rushbet__content {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .chooseWinner {
+    padding: 0px;
+    margin-left: 0px;
+  }
+  .chooseWinner__textFooter {
+    display: none;
+  }
+  .calculate__textFooter{
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .logo__container {
+    justify-content: center;
+  }
+  .rushbet__content {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    justify-content: flex-start;
+    gap: 0;
+    align-items: center;
+    padding: 80px 35px 0px;
+  }
+
+  .chooseWinner__title{
+    text-align: center;
+    color: @textColor;
+    margin-top: 15px;
+  }
+
+  .chooseWinner .team__container::before {
+    width: 78%;
+  }
+
+  .calculate__bet {
+    padding: 25px;
+  }
+
+  .footer__container{
+    flex-direction: column;
+    gap: 0px;
+    bottom: 0px;
+  }
+
+  .footer__container p{
+    text-align: center;
+    line-height: 12px
+  }
+
+  .footer__container img{
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .bet__content {
+    padding: 15px 20px;
+  }
+
+  .chooseWinner .team__container::before {
+    width: 7 8%;
+  }
+
+  .footer__container img{
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .refresh__text_content h3{
+    color: @textColor;
+    font-size: 0.9em;
+  }
+  .footer__container{
+    display: none;
+  }
 }

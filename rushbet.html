@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/rushbet.css">
+</head>
+<body>
+  <header class="logo__container">
+    <img src="./assets/Image/logo-sportsbook.svg" alt="">
+    <h1 class="logo__container_title">USHBET.CO</h1>
+  </header>
+
+  <main class="rushbet__content">
+    <section class="chooseWinner">
+
+      <h2 class="chooseWinner__title">Elige al ganador</h2>
+
+      <div class="team__container">
+        <div class="flag">
+          <div class="check__image"></div>
+          <input type="checkbox" id="CheckArgentina">
+          <div class="flag__argentina_img"></div>
+        </div>
+        <div class="text__vs">
+          <h1>VS</h1>
+        </div>
+        <div class="flag">
+          <input type="checkbox" id="CheckBrasil">
+          <div class="flag__brasil_img"></div>
+        </div>
+      </div>
+
+      <div class="text__tie">
+        <h3 class="text__tie_text">Empate</h3>
+        <div class="flag__empate">
+          <input type="checkbox" id="CheckEmpate">
+        </div>
+      </div>
+
+      <div class="value__number">
+        <p class="value__number_cuot">1.04</p>
+        <p class="value__number_empate">12</p>
+        <p class="value__number_cuot">326</p>
+      </div>
+      <p class="chooseWinner__textFooter">*Las cuotas estan ajustadas a cambios</p>
+    </section>
+
+    <section class="calculate__bet">
+      <div class="bet__content">
+        <div class="refresh__text_content">
+          <h3>calcular apuesta</h3>
+          <button class="refresh__button_content" onclick="location.reload()">
+            <img src="./assets/Image/refresh.png" alt="">
+          </button>
+        </div>
+        <div class="inputNumber__bet">
+          <input type="number" id="valueBet" placeholder="$_______">
+        </div>
+        <div class="clac__button">
+          <button type="button" onclick="apuesta()"> CALCULAR </button>
+        </div>
+        <div class="textWiner__h1">
+          <p id="ResultH1">GANAS</p>
+        </div>
+      </div>
+
+      <div class="button__bet_now">
+        <button onclick="refresh()">APUESTA AHORA</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer__container">
+    <p>Jugra sin control causa adicción *Jugar legal es apostar a la salud* El juego es entretenimiento, juega con moderación *prohibida la venta a menores de edad </p>
+    <img src="./assets/Image/COLJUEGOS-1-1.png" alt="">
+  </footer>
+
+
+
+  <script src="./JS/Rushbet.js"></script>
+  <script src="./JS/RushbetImage.js"></script>
+</body>
+</html>

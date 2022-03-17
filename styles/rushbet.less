@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+@textColor: #fff;
+@textHighlight: #022248;
+@secondColor: #fcc307;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url('../assets/Image/BG-DESKTOP.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 92% 50%;
+  padding: 15px;
+}
+
+.logo__container{
+  display: flex;
+  align-items: center;
+  margin: 0;
+  .logo__container_title{
+    color: @textColor;
+    font-size: 2.5em;
+    font-style: italic;
+    margin-top: 20px;
+  }
+}
+
+.rushbet__content{
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10%;
+  align-items: center;
+  padding: 15px;
+}
+
+/* section 1 */
+.chooseWinner{
+  padding: 25px;
+  margin-left: 30px;
+  .chooseWinner__title{
+    text-align: center;
+    color: @textColor;
+    margin-bottom: 15px;
+  }
+  .team__container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 0;
+    &::before{
+      content: ' ';
+      width: 68%;
+      height: 50px;
+      position: absolute;
+      left: 45px;
+      background-color: #face3f;
+    }
+  }
+}
+
+.flag{
+  position: relative;
+}
+.flag input{
+  width: 25px;
+  height: 25px;
+  position: relative;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  &::after{
+    content: ' ';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background-color: @textColor;
+    border-radius: 50%;
+  }
+}
+
+.flag input[type="checkbox"]:checked::before{
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  background-image: url('../assets/Image/Check.png');
+  background-size: cover;
+  background-position: center center;
+  z-index: 1000;
+}
+
+.flag__argentina_img img{
+  width: 100px;
+  height: 100px;
+}
+
+.text__vs{
+  position: relative;
+  width: 100%;
+  color: @textHighlight;
+  text-align: center;
+  font-size: 1.6em;
+  &::before{
+    content: ' ';
+    width: 120px;
+    height: 100%;
+    position: absolute;
+    right: -50px;
+  }
+}
+
+.flag__brasil_img img{
+  width: 100px;
+  height: 100px;
+}
+
+.text__tie{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  .text__tie_text{
+    color: @textColor;
+  }
+}
+
+.flag__empate{
+  position: relative;
+}
+
+.flag__empate input{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  margin-left: 15px;
+  cursor: pointer;
+  &::after{
+    content: ' ';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background-color: @textColor;
+    border-radius: 50%;
+  }
+}
+
+.flag__empate input[type="checkbox"]:checked::before{
+  content: ' ';
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  background-image: url('../assets/Image/Check.png');
+  background-size: cover;
+  background-position: center center;
+  z-index: 1000;
+}
+
+.value__number{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  .value__number_cuot{
+    width: 100%;
+    text-align: center;
+    color: @textColor;
+    background-color: @textHighlight;
+    border-radius: 15px;
+    padding: 0 5px;
+  }
+  .value__number_empate{
+    width: 80%;
+    text-align: center;
+    color: @textColor;
+    background-color: @textHighlight;
+    border-radius: 15px;
+    padding: 0 5px;
+  }
+}
+
+.chooseWinner__textFooter{
+  color: @textColor;
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+/* section 2 */
+
+.calculate__bet{
+  padding: 40px 25px;
+}
+
+.bet__content{
+  background-color: @textHighlight;
+  padding: 15px 60px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 16px 1px rgba(0,0,0,0.98);
+  .refresh__text_content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .refresh__text_content h3{
+      color: @textColor;
+    }
+  }
+}
+
+.refresh__button_content{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.refresh__button_content img{
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+
+
+.inputNumber__bet{
+  width: 100%;
+  height: 35px;
+  border-radius: 15px;
+  background-color: @textColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.inputNumber__bet input{
+  width: 60%;
+  height: 25px;
+  position: relative;
+  border: 0;
+  outline: none;
+  padding-left: 15px;
+}
+
+.inputNumber__bet input::placeholder{
+  text-align: center;
+  color: @textHighlight;
+}
+
+.clac__button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.clac__button button{
+  width: 90%;
+  height: 35px;
+  border-radius: 7px;
+  border: none;
+  background-color: @secondColor;
+  color: @textHighlight;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.textWiner__h1{
+  width: 100%;
+  height: 35px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  background-color: @textColor;
+}
+
+.textWiner__h1 p{
+  color: @textHighlight;
+  padding: 5px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.button__bet_now{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.button__bet_now button{
+  width: 90%;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  background-color: @secondColor;
+  color: @textHighlight;
+  font-weight: bold;
+  font-size: 1em;
+  box-shadow: 3px 3px 0px 1px  @textHighlight;
+  cursor: pointer;
+}
+
+/* footer */
+
+.footer__container{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.footer__container p{
+  color: @textColor;
+  font-size: 0.7em;
+}
+.footer__container img{
+  width: 100px;
+  height: 40px;
+}
